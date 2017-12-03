@@ -18,4 +18,9 @@ first argument
 
 const forEach = function(arr, callback) {
   // implement forEach here
+  let newArray = []
+  for (let i = 0; i < arr.length; i++) {
+    newArray = callback(arr[i], i, arr)
+  }
+  return newArray
 }
